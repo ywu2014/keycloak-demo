@@ -1,0 +1,10 @@
+{
+  "realm": "SpringBoot",
+  "auth-server-url": "http://localhost:8180/auth/",
+  "ssl-required": "external",
+  "resource": "adapter-servlet-credentials-1",
+  "credentials": {
+    "secret": "0e053b89-d87f-460a-92ec-adcd11ce6034"
+  },
+  "confidential-port": 0
+}
