@@ -1,0 +1,16 @@
+keycloak:
+  auth-server-url: http://localhost:8180/auth
+  credentials:
+    secret: 0e053b89-d87f-460a-92ec-adcd11ce6034
+  public-client: false
+  realm: SpringBoot
+  resource: adapter-servlet-credentials-1
+  securityConstraints:
+    - authRoles:
+        - ADMIN
+      securityCollections:
+        - name: common user
+          patterns:
+            - /protected/*
+server:
+  port: 8081
