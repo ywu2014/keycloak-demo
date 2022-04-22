@@ -11,7 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class ProductController {
+public class PrincipleController {
 
     @ResponseBody
     @GetMapping(path = "/protected/principle")
@@ -19,7 +19,7 @@ public class ProductController {
         KeycloakSecurityContext keycloakContext = (KeycloakSecurityContext) request.getAttribute(KeycloakSecurityContext.class.getName());
 
         AccessToken token = keycloakContext.getToken();
-        System.out.println("realm:" + keycloakContext.getRealm() + ", token:" + token.getAuthorization());
+        System.out.println("realm:" + keycloakContext.getRealm() + ", token:" + keycloakContext.getTokenString());
 
         return token;
     }
