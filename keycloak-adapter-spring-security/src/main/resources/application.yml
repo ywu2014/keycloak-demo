@@ -1,0 +1,12 @@
+keycloak:
+  auth-server-url: http://localhost:8180/auth
+  credentials:
+    secret: 568b2c97-147b-4ce3-9fe5-723776efa6a7
+  public-client: false
+  realm: SpringBoot
+  resource: adapter-spring-security-confidential
+server:
+  port: 8081
+logging:
+  level:
+    org.keycloak: debug
