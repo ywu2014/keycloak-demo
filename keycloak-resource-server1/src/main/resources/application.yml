@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: keycloak-resource-server1
   security:
     oauth2:
       resourceserver:
@@ -6,3 +8,7 @@ spring:
           issuer-uri: http://localhost:8180/auth/realms/SpringBoot
 server:
   port: 8280
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
