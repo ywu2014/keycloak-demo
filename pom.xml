@@ -11,6 +11,7 @@
     <module>keycloak-adapter-servlet</module>
       <module>keycloak-adapter-springboot</module>
       <module>keycloak-adapter-spring-security</module>
+      <module>keycloak-resource-server1</module>
   </modules>
 
   <name>keycloak-demo</name>
