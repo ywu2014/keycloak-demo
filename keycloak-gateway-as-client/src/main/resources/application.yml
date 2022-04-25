@@ -1,0 +1,36 @@
+server:
+  port: 5556
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: keycloak-gateway-as-client
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      default-filters:
+        # 传递token到后端服务
+        - TokenRelay
+  security:
+    oauth2:
+      client:
+        provider:
+          my-keycloak-provider:
+            issuer-uri: http://localhost:8180/auth/realms/SpringBoot
+            # Individual properties can also be provided this way
+            # token-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/token
+            # authorization-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/auth
+            # userinfo-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/userinfo
+            # user-name-attribute: preferred_username
+        registration:
+          keycloak-spring-gateway-client:
+            provider: my-keycloak-provider
+            client-id: keycloak-gateway
+            client-secret: 27ecd5ee-5a1b-4158-a2f4-e983487ae6f8
+            authorization-grant-type: authorization_code
+            # redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
