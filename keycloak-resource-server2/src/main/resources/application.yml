@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: keycloak-resource-server2
+server:
+  port: 8281
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

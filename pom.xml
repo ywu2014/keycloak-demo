@@ -15,6 +15,7 @@
     <module>keycloak-gateway-as-client</module>
     <module>keycloak-registration-eureka</module>
     <module>keycloak-gateway-as-resource-server</module>
+    <module>keycloak-resource-server2</module>
   </modules>
 
   <name>keycloak-demo</name>
