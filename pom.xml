@@ -16,6 +16,7 @@
     <module>keycloak-registration-eureka</module>
     <module>keycloak-gateway-as-resource-server</module>
     <module>keycloak-resource-server2</module>
+      <module>keycloak-rest-api</module>
   </modules>
 
   <name>keycloak-demo</name>
